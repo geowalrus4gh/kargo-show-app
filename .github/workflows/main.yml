@@ -52,16 +52,16 @@ jobs:
         with:
           context: .
           push: true
-          tags: geowalrus/kargo-demo-app:${{ env.VERSION }}
+          tags: geowalrus/kargo-show-app:${{ env.VERSION }}
 
       - name: Chart Push
         uses: geowalrus4gh/helm-oci-chart-releaser@v1.0.0
         with:
-          name: kargo-demo-app-charts
+          name: kargo-show-app-charts
           repository: geowalrus
           tag: ${{ env.VERSION }}
           app_version: ${{ env.VERSION }}
-          path: charts/kargo-demo-app-charts
+          path: charts/kargo-show-app-charts
           registry: registry-1.docker.io
           registry_username: ${{ secrets.DOCKERHUB_USERNAME }}
           registry_password: ${{ secrets.DOCKERHUB_TOKEN }}

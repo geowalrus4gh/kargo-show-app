@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "kargo-demo-app-charts.fullname" . }}
+  name: {{ include "kargo-show-app-charts.fullname" . }}
   labels:
-    {{- include "kargo-demo-app-charts.labels" . | nindent 4 }}
+    {{- include "kargo-show-app-charts.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "kargo-demo-app-charts.fullname" . }}
+    name: {{ include "kargo-show-app-charts.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
