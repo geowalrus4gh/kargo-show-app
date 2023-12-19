@@ -27,4 +27,9 @@ public class EchoController {
 		return "Am a many";
 	}
 
+	@GetMapping("/manyForAny")
+	public String manyForAny() {
+		return "Am a many for any";
+	}
+
 }
