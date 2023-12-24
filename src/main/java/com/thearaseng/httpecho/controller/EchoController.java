@@ -32,4 +32,9 @@ public class EchoController {
 		return "Am a many for any";
 	}
 
+	@GetMapping("/manyForAnyAny")
+	public String manyForAnyAny() {
+		return "Am a many for any";
+	}
+
 }
