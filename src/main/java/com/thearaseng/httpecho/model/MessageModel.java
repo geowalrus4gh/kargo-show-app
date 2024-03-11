@@ -6,7 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class MessageModel {
-
+	// commmented
 	private String message;
 
 }
